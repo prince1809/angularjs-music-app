@@ -11,12 +11,17 @@ module.exports = function(grunt){
   grunt.initConfig({
     //disribution directory
     distdir: 'dist',
+    pkg: grunt.file.readJSON('package.json'),
     //src directory
     src: {
       js: ['src/**/*.js'],
       html: ['src/index.html']
     },
     concat: {
+      dist: {
+        src: ['<%= src.js %>'],
+        dest: '<%= distdir %>/<%= pkg.name %>.js'
+      },
       index: {
         src: ['src/index.html'],
         dest: '<%= distdir %>/index.html',

@@ -3,6 +3,7 @@ var config = require('./config.js');
 
 var app = express();
 
+app.use(config.server.staticUrl, express.static(config.server.distFolder))
 
 app.get('/',function(req,res){
 

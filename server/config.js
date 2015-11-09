@@ -4,7 +4,8 @@ module.exports = {
 
   server: {
     listenPort: 3000,
-    distFolder: path.resolve(__dirname,'../client/dist')
+    distFolder: path.resolve(__dirname,'../client/dist'),
+    staticUrl: '/static',
   }
 
 };

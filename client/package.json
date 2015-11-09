@@ -1,5 +1,5 @@
 {
-  "name": "client",
+  "name": "angular-app",
   "version": "1.0.0",
   "description": "An Music App demonstrating the power of angular js with grunt",
   "main": "index.js",
