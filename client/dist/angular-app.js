@@ -1,3 +1,8 @@
-//some js files
 var app = angular.module('myApp',[]);
-// this is
+
+//creating a controller
+app.controller('MyController',function($scope){
+  $scope.person = {
+    name: 'Prince Kumar'
+  }
+});
