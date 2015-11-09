@@ -5,6 +5,16 @@ app.controller('MyController',function($scope){
   $scope.person = {
     name: 'Prince Kumar'
   }
+
+  var updateClock = function(){
+    $scope.clock = new Date();
+  };
+
+  var timer = setInterval(function(){
+    $scope.$apply(updateClock);
+  },1000);
+
+  updateClock();
 });
 
 app.controller('PlayerController',function($scope){
