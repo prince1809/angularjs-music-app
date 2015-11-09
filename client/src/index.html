@@ -5,8 +5,10 @@
     <script type="text/javascript" src="/static/<%= grunt.config.get('pkg.name') %>.js"></script>
 </head>
   <body>
-    <div ng-controller="MyController">
-      <h1>Hello, {{ person.name }}!</h1>
+    <div ng-controller="PlayerController">
+      <button ng-click="play()" class="button" ng-show="!playing">Play</button>
+      <button ng-click="stop()" class="button alert" ng-show="playing">Stop</button>
+      Playing audio: <b>{{ playing }}</b>
     </div>
   </body>
 </html>
