@@ -1,11 +1,12 @@
 var express = require('express');
+var config = require('./config.js');
 
 var app = express();
 
 
 app.get('/',function(req,res){
 
-  res.send('Hello World');
+  res.sendFile('index.html',{ root: config.server.distFolder });
 
 });
 
