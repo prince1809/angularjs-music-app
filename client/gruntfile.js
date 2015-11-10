@@ -21,7 +21,8 @@ module.exports = function(grunt){
     //src directory
     src: {
       js: ['src/**/*.js'],
-      html: ['src/index.html']
+      html: ['src/index.html'],
+      css: ['src/**/*.css']
     },
     concat: {
       dist: {
@@ -34,6 +35,10 @@ module.exports = function(grunt){
         options: {
           process: true
         }
+      },
+      css: {
+        src: ['<%= src.css %>'],
+        dest: '<%= distdir %>/<%= pkg.name %>.css'
       }
     },
 

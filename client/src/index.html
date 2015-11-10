@@ -20,7 +20,7 @@
 
     <div ng-controller="PlayerController">
       <li ng-repeat="program in programs" ng-click="play(program)">
-        <span class="large-12">{{ program.title.$text }}</span>
+        <span npr-link play='play(program)' ng-model="program"></span>
       </li>
     </div>
   </body>

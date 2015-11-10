@@ -60,3 +60,16 @@ app.controller('PlayerController', ['$scope', '$http', function($scope, $http) {
     $scope.playing = true;
   };
 }]);
+
+app.directive('nprLink',function(){
+  return {
+    restrict: 'EA',
+    require: ['^ngModel'],
+    replace: true,
+    scope: {
+      ngModel: '=',
+      play: '&'
+    },
+    template: '<span>{{ ngModel.title.$text }}</span>',
+  }
+})
