@@ -46,4 +46,17 @@ app.controller('PlayerController', ['$scope', '$http', function($scope, $http) {
   }).error(function(data,status){
 
   });
+
+  $scope.playing = false;
+  $scope.audio = document.createElement('audio');
+
+  $scope.play = function(program){
+
+    if($scope.playing) { $scope.audio.pause(); }
+
+    var url = program.audio[0].format.mp4.$text;
+    $scope.audio.src = url;
+    $scope.audio.play();
+    $scope.playing = true;
+  };
 }]);

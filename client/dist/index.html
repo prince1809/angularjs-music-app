@@ -19,7 +19,9 @@
     </div>
 
     <div ng-controller="PlayerController">
-      {{ programs }}
+      <li ng-repeat="program in programs" ng-click="play(program)">
+        <span class="large-12">{{ program.title.$text }}</span>
+      </li>
     </div>
   </body>
 </html>
