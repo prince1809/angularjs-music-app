@@ -10,10 +10,16 @@
       <h5>Hello {{person.name}}</h5>
       <h5>{{ clock }}</h5>
     </div>
+
+    <div ng-controller="DemoController">
+      <h4> Like Counter </h4>
+      <button ng-click="add(1)" class="button">Like</button>
+      <button ng-click="substract(1)" class="button">Dislike</button>
+      <h4>Current Counter : {{counter}}</h4>
+    </div>
+
     <div ng-controller="PlayerController">
-      <button ng-click="play()" class="button" ng-show="!playing">Play</button>
-      <button ng-click="stop()" class="button alert" ng-show="playing">Stop</button>
-      Playing audio: <b>{{ playing }}</b>
+      {{ programs }}
     </div>
   </body>
 </html>
